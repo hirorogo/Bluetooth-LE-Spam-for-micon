@@ -1,0 +1,13 @@
+# Arduino library files
+*.ino text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.c text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Properties files
+*.properties text eol=lf
+*.ini text eol=lf

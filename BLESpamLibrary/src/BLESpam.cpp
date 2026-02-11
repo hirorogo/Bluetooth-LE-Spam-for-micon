@@ -83,7 +83,26 @@ void BLESpam::setAdvertisingInterval(uint16_t intervalMs) {
 void BLESpam::setTxPower(int8_t powerDbm) {
     _txPower = powerDbm;
 #if defined(ESP32)
-    esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV, (esp_power_level_t)powerDbm);
+    // Map dBm values to ESP32 power level enum
+    esp_power_level_t powerLevel;
+    if (powerDbm <= -12) {
+        powerLevel = ESP_PWR_LVL_N12;
+    } else if (powerDbm <= -9) {
+        powerLevel = ESP_PWR_LVL_N9;
+    } else if (powerDbm <= -6) {
+        powerLevel = ESP_PWR_LVL_N6;
+    } else if (powerDbm <= -3) {
+        powerLevel = ESP_PWR_LVL_N3;
+    } else if (powerDbm <= 0) {
+        powerLevel = ESP_PWR_LVL_N0;
+    } else if (powerDbm <= 3) {
+        powerLevel = ESP_PWR_LVL_P3;
+    } else if (powerDbm <= 6) {
+        powerLevel = ESP_PWR_LVL_P6;
+    } else {
+        powerLevel = ESP_PWR_LVL_P9;
+    }
+    esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV, powerLevel);
 #endif
 }
 
@@ -297,5 +316,5 @@ void BLESpam::advertiseFastPair(const char* modelId) {
     uint8_t dataLen = 0;
     
     _generateFastPairData(modelId, data, &dataLen);
-    _startAdvertising(MANUFACTURER_ID_APPLE, data, dataLen);
+    _startAdvertising(MANUFACTURER_ID_GOOGLE, data, dataLen);
 }

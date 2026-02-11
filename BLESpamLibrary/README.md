@@ -179,6 +179,7 @@ The library includes several example sketches:
 2. **WindowsSwiftPair** - Advertise Windows Swift Pair
 3. **SamsungEasySetup** - Advertise Samsung Easy Setup
 4. **AllDevicesSpam** - Cycle through all spam types
+5. **RandomAppleSpam** - Advanced random device spam with statistics
 
 ## Hardware Requirements
 

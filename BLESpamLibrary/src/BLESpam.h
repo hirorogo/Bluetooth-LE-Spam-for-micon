@@ -31,6 +31,7 @@
 #define MANUFACTURER_ID_APPLE 0x004C      // 76
 #define MANUFACTURER_ID_MICROSOFT 0x0006  // 6
 #define MANUFACTURER_ID_SAMSUNG 0x0075    // 117
+#define MANUFACTURER_ID_GOOGLE 0x00E0     // 224 (for Fast Pair)
 
 // Maximum advertisement data size
 #define MAX_BLE_ADVERTISEMENT_SIZE 31

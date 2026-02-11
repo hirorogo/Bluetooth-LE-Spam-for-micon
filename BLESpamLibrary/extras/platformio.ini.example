@@ -1,0 +1,50 @@
+; PlatformIO Project Configuration File Example
+;
+; This is an example configuration for using the BLESpam library
+; with PlatformIO. Copy this to your project's root directory as
+; platformio.ini and modify as needed.
+;
+; For more options and information see:
+; https://docs.platformio.org/page/projectconf.html
+
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino
+
+; Set upload speed
+upload_speed = 921600
+
+; Set monitor speed
+monitor_speed = 115200
+
+; Library dependencies
+; Option 1: Use the local library (if in same repo)
+; lib_deps = 
+;     file://../BLESpamLibrary
+
+; Option 2: Use from GitHub
+lib_deps = 
+    https://github.com/hirorogo/Bluetooth-LE-Spam-for-micon.git
+
+; Build flags (optional)
+build_flags = 
+    -DCORE_DEBUG_LEVEL=3
+
+[env:esp32-s3]
+platform = espressif32
+board = esp32-s3-devkitc-1
+framework = arduino
+upload_speed = 921600
+monitor_speed = 115200
+lib_deps = 
+    https://github.com/hirorogo/Bluetooth-LE-Spam-for-micon.git
+
+[env:esp32-c3]
+platform = espressif32
+board = esp32-c3-devkitm-1
+framework = arduino
+upload_speed = 921600
+monitor_speed = 115200
+lib_deps = 
+    https://github.com/hirorogo/Bluetooth-LE-Spam-for-micon.git

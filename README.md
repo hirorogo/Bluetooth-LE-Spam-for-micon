@@ -4,9 +4,19 @@
 alt="Get it on F-Droid"
 height="80">](https://f-droid.org/packages/de.simon.dankelmann.bluetoothlespam/)
 
-This project uses the built-in Bluetooth Low Energy (BLE) functionality built into Android devices
-to create Phantom Bluetooth Device Advertisements, similar to what is known, for instance, in the case of the Flipper Zero.
-While other apps are available that provide similar functionality, the objective of this app is to enhance convenience and user-friendliness in the process.
+This project provides tools to create Phantom Bluetooth Device Advertisements using Bluetooth Low Energy (BLE), similar to what is known in the case of the Flipper Zero.
+
+## 📦 Two Ways to Use
+
+### 🤖 Android App
+Uses the built-in BLE functionality in Android devices for convenience and user-friendliness.
+
+### 🔧 Arduino Library (NEW!)
+**Now available as an Arduino library for microcontrollers!** Use ESP32 and other BLE-capable boards to create BLE spam.
+
+👉 **[Get Started with the Arduino Library](BLESpamLibrary/README.md)**
+
+---
 
 #### [For Support, Join the Discord Server](https://discord.gg/x4e4Gma585)
 
@@ -15,6 +25,8 @@ While other apps are available that provide similar functionality, the objective
 > Contributions from anyone are appreciated.   
 
 ## Requirements
+
+### Android App
 
 <details >
 <summary>Details</summary>
@@ -25,6 +37,37 @@ Tip: If you don't know your API level visit <a href="https://developer.android.c
  <br>
    <br>
 - You can not run the app on IOS or PC (even with emulators/VM's)
+
+</details>
+
+### Arduino Library
+
+<details >
+<summary>Details</summary>
+<br>
+
+**Supported Platforms:**
+- ESP32 (ESP32, ESP32-S3, ESP32-C3, etc.) - Full support ✅
+- nRF52 series - Coming soon
+- Other BLE-capable microcontrollers - Portable design
+
+**Requirements:**
+- Arduino IDE 1.8.13+ or Arduino IDE 2.x
+- ESP32 board support package
+- BLESpam library (included in this repository)
+
+**Quick Start:**
+```cpp
+#include <BLESpam.h>
+BLESpam bleSpam;
+
+void setup() {
+    bleSpam.begin("ESP32-BLE");
+    bleSpam.advertiseAppleDevice(AIRPODS_PRO);
+}
+```
+
+See the **[BLESpam Library Documentation](BLESpamLibrary/README.md)** for full instructions.
 
 </details>
 

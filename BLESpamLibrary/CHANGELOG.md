@@ -1,5 +1,7 @@
 # Changelog
 
+> [日本語版](CHANGELOG_ja.md) | [English](CHANGELOG.md)
+
 All notable changes to the BLESpam library will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),

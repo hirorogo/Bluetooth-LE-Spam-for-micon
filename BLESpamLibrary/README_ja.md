@@ -1,5 +1,7 @@
 # BLESpam ライブラリ
 
+> [日本語ドキュメント](README_ja.md) | [English Documentation](README.md)
+
 Arduino用のBluetooth Low Energy (BLE) スパムライブラリです。ESP32やnRF52などのBLE対応マイコンで使用できます。
 
 ## 特徴

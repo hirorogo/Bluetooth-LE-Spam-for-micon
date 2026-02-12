@@ -1,5 +1,7 @@
 # BLESpam Library - Quick Reference
 
+> [日本語版](QUICK_REFERENCE_ja.md) | [English](QUICK_REFERENCE.md)
+
 ## Installation Quick Start
 
 ### Arduino IDE

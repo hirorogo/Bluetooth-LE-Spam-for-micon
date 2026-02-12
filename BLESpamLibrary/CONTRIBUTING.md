@@ -1,5 +1,7 @@
 # Contributing to BLESpam Library
 
+> [日本語版](CONTRIBUTING_ja.md) | [English](CONTRIBUTING.md)
+
 Thank you for your interest in contributing to the BLESpam library! This document provides guidelines for contributing.
 
 ## How to Contribute

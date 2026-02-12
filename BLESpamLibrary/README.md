@@ -1,5 +1,7 @@
 # BLESpam Library
 
+> [日本語ドキュメント](README_ja.md) | [English Documentation](README.md)
+
 A powerful Arduino library for creating Bluetooth Low Energy (BLE) advertisements that mimic various device pairing services. Compatible with ESP32, nRF52, and other BLE-capable microcontrollers.
 
 ## Features

@@ -1,5 +1,7 @@
 # Getting Started with BLESpam Library
 
+> [日本語版](GettingStarted_ja.md) | [English](GettingStarted.md)
+
 This guide will help you get started with the BLESpam library on your microcontroller.
 
 ## Prerequisites
